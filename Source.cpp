@@ -128,8 +128,6 @@ void RedeemReward(FToken Token) {
 	cpr::Response r = cpr::Post(cpr::Url{ "https://fortnite-public-service-prod11.ol.epicgames.com/fortnite/api/game/v2/profile/" + Token.ID + "/client/ClaimLoginReward?profileId=campaign" },
 								cpr::Body{ "{}" },
 								cpr::Header{ {"Content-Type", "application/json"}, {"Authorization", "Bearer "+Token.AccessToken} });
-
-	WriteContent("Debug.txt", r.text);
 }
 
 int main() {
